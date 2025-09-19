@@ -107,6 +107,20 @@ Params size (MB): 0.07
 Estimated Total Size (MB): 0.57
 ----------------------------------------------------------------
 ```
+### Receptive field - Calculation
+
+We use the standard iterative formulas. Start values:
+- `rf_0 = 1` (a single input pixel)
+- `j_0 = 1` (effective jump / stride from input)
+input spatial size = 28
+
+For a layer with kernel `k`, stride `s`, padding `p`:
+- `rf_new = rf_prev + (k - 1) * j_prev`
+- `j_new = j_prev * s`
+
+<img width="1148" height="261" alt="image" src="https://github.com/user-attachments/assets/fd8edb7c-58c2-4578-a551-fda82672166c" />
+
+
 ## ⚙️ Training Setup
 - Optimizer: Adam (lr=0.001) → adaptive learning rates for fast convergence
 - Scheduler: StepLR (step_size=15, gamma=0.5) → reduces learning rate when training plateaus
