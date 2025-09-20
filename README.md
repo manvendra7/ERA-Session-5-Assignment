@@ -118,7 +118,8 @@ For a layer with kernel `k`, stride `s`, padding `p`:
 - `rf_new = rf_prev + (k - 1) * j_prev`
 - `j_new = j_prev * s`
 
-<img width="1148" height="261" alt="image" src="https://github.com/user-attachments/assets/fd8edb7c-58c2-4578-a551-fda82672166c" />
+<img width="1347" height="258" alt="image" src="https://github.com/user-attachments/assets/358a81c7-1ae6-4594-8818-a637c250e66d" />
+
 
 
 ## ⚙️ Training Setup
